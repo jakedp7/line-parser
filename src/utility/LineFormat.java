@@ -1,3 +1,5 @@
+package utility;
+
 import java.util.HashMap;
 
 /**
@@ -10,7 +12,7 @@ public class LineFormat {
      * to the name of the entry, and the array has two elements:
      * the start and end indices in a fixed-width line of data
      */
-    private HashMap<String, Integer[]> lineFormat;
+    private HashMap<String, FieldBounds> lineFormat;
 
     /**
      * Empty constructor for later addition of entries.
@@ -26,17 +28,13 @@ public class LineFormat {
 
     }
 
-    public void addEntry(String entryName, Integer entryStartIndex,
-                         Integer entryEndIndex) {
-
-        //Create a small array of fixed-width format indices
-        Integer[] entryBounds = {entryStartIndex, entryEndIndex};
+    public void addEntry(String entryName, FieldBounds fieldBounds) {
 
         //Store the name and indices to the object
-        lineFormat.put(entryName, entryBounds);
+        lineFormat.put(entryName, fieldBounds);
     }
 
-    public Integer[] getEntryIndices(String entryName) {
+    public FieldBounds getEntryIndices(String entryName) {
 
         //Return the indices of the specific entryName requested
         return lineFormat.get(entryName);

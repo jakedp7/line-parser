@@ -1,7 +1,9 @@
+import utility.LineFormat;
+
 /**
  * Created by Jacob on 8/28/2015.
  */
-public class LineParser {
+public class FixedWidthLineParser {
 
     /**
      * javaBean annotated with each member's position in the
@@ -12,17 +14,17 @@ public class LineParser {
     protected Class javaBean;
 
     /**
-     * LineFormat stores names and positions of fields in a
+     * utility.LineFormat stores names and positions of fields in a
      * fixed-width line of data.
      */
     private LineFormat lineFormat;
 
-    public LineParser(Class javaBean) {
+    public FixedWidthLineParser(Class javaBean) {
 
         //Store the input bean into the new object
         this.javaBean = javaBean;
 
-        //Extract lineFormat from annotations in the bean through LineFormat
+        //Extract lineFormat from annotations in the bean through utility.LineFormat
         this.lineFormat = new LineFormat(javaBean);
     }
 
