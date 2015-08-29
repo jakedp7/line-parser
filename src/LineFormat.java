@@ -26,11 +26,25 @@ public class LineFormat {
 
     }
 
-    public void addEntry() {
+    public void addEntry(String entryName, Integer entryStartIndex,
+                         Integer entryEndIndex) {
 
+        //Create a small array of fixed-width format indices
+        Integer[] entryBounds = {entryStartIndex, entryEndIndex};
+
+        //Store the name and indices to the object
+        lineFormat.put(entryName, entryBounds);
     }
 
-    public void removeEntry() {
+    public Integer[] getEntryIndices(String entryName) {
 
+        //Return the indices of the specific entryName requested
+        return lineFormat.get(entryName);
+    }
+
+    public void removeEntry(String entryName) {
+
+        //Remove entry with specific entryName
+        lineFormat.remove(entryName);
     }
 }
