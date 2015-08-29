@@ -28,8 +28,8 @@ public class FixedWidthLineParser {
         this.lineFormat = new LineFormat(javaBean);
     }
 
-    public Object parseLine(String line) {
+    public Object parseLine(String line) throws IllegalAccessException, InstantiationException {
 
-        return;
+        return this.javaBean.newInstance();
     }
 }
