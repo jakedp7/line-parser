@@ -1,5 +1,3 @@
-package tests;
-
 import junit.framework.TestCase;
 import org.junit.Test;
 import utility.FieldBounds;
