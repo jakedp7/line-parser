@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="166200e3-e542-4345-950e-dd55c8ce6063" name="Default" comment="Updated project structure (again.... sorry...)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java" />
-      <change type="DELETED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\test\java\FixedWidthLineParserTest.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\main\java\FixedWidthLineParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\main\java\PositionInLine.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/PositionInLine.java" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\main\java\TripOccurence.java" afterPath="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/TripOccurrence.java" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\main\java\utility\FieldBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/FieldBounds.java" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\main\java\utility\LineFormat.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\test\java\FieldBoundsTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FieldBoundsTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Jacob\Google Drive\Hackerspace\Projects\line-parser\src\test\java\LineFormatTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/LineFormatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/line-parser.iml" afterPath="$PROJECT_DIR$/line-parser.iml" />
+    <list default="true" id="166200e3-e542-4345-950e-dd55c8ce6063" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/FieldBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/FieldBounds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java" afterPath="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="line-parser.iws" />
@@ -34,12 +28,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="LineFormat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixedWidthLineParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
+                <element signature="e#1258#1259#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FixedWidthLineParserTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33846155">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.36942676">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldBounds.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/FieldBounds.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+              <folding>
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,9 +133,12 @@
         <option value="$PROJECT_DIR$/src/test/java/TripOccurence.java" />
         <option value="$PROJECT_DIR$/src/test/java/TripOccurrence.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FieldBoundsTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/LineFormatTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/TripOccurrence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/FieldBounds.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java" />
       </list>
     </option>
   </component>
@@ -399,29 +439,8 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in line-parser">
+  <component name="RunManager" selected="JUnit.FixedWidthLineParserTest.testAnnotationReader">
     <configuration default="false" name="All in line-parser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="line-parser" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in line-parser (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="line-parser" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -498,6 +517,32 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FixedWidthLineParserTest.testAnnotationReader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.powell.LineParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="line-parser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.powell.LineParserTests" />
+      <option name="MAIN_CLASS_NAME" value="com.powell.LineParserTests.FixedWidthLineParserTest" />
+      <option name="METHOD_NAME" value="testAnnotationReader" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -707,18 +752,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in line-parser" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in line-parser (1)" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FixedWidthLineParserTest.testParseLine" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.All in line-parser (2)" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.All in line-parser (3)" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FixedWidthLineParserTest.testParseLine" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All in line-parser (2)" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in line-parser (3)" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FixedWidthLineParserTest.testAnnotationReader" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in line-parser" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in line-parser (3)" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in line-parser (2)" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FixedWidthLineParserTest.testParseLine" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in line-parser (1)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FixedWidthLineParserTest.testAnnotationReader" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in line-parser" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in line-parser (3)" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in line-parser (2)" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FixedWidthLineParserTest.testParseLine" />
       </list>
     </recent_temporary>
   </component>
@@ -780,26 +825,32 @@
       <option name="project" value="LOCAL" />
       <updated>1440893869293</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated project structure (again.... sorry...)">
+      <created>1440895062406</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1440895062406</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32868853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32459018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="318" y="345" width="2514" height="909" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32459018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="318" y="345" width="2514" height="909" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23194444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21064815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868853" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -851,6 +902,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,16 +912,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,6 +926,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,6 +938,20 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -898,16 +961,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/PositionInLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22353937">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,44 +982,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/TripOccurrence.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/PositionInLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6305733">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2191082">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2700636">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.22353937">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_45/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5592357">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5784#5785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/TripOccurrence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.93375796">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/FieldBounds.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33630574">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding>
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/utility/LineFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/powell/FixedWidthLineParser/FixedWidthLineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/powell/LineParserTests/FixedWidthLineParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33846155">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36942676">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>

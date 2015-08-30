@@ -1,6 +1,8 @@
 package com.powell.FixedWidthLineParser.utility;
 
+import javax.sound.sampled.Line;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * Created by Jacob on 8/28/2015.
@@ -37,5 +39,34 @@ public class LineFormat {
 
         //Remove entry with specific entryName
         lineFormat.remove(entryName);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 7 * hash + this.lineFormat.hashCode();
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) {
+            return true;
+        }
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
+        LineFormat lineFormatToCompare = (LineFormat)object;
+
+        Iterator<String> keyIterator = this.lineFormat.keySet().iterator();
+        while (keyIterator.hasNext()) {
+            String currentKey = keyIterator.next();
+
+            if (!this.getEntryIndices(currentKey).equals(
+                    lineFormatToCompare.getEntryIndices(currentKey))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

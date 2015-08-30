@@ -19,7 +19,7 @@ public class FixedWidthLineParser {
     protected Class javaBean;
 
     /**
-     * com.powell.FixedWidthLineParser.LineFormatdthLineParser.utility.LineFormat stores names and positions of fields in a
+     * LineFormat stores names and positions of fields in a
      * fixed-width line of data.
      */
     private LineFormat lineFormat;
@@ -36,6 +36,10 @@ public class FixedWidthLineParser {
     public Object parseLine(String line) throws IllegalAccessException, InstantiationException {
 
         return this.javaBean.newInstance();
+    }
+
+    public LineFormat getLineFormat() {
+        return lineFormat;
     }
 
     private LineFormat lineFormatFromAnnotations(Class javaBean) {
