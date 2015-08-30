@@ -1,4 +1,4 @@
-package main.java.utility;
+package com.powell.FixedWidthLineParser.utility;
 
 import java.util.HashMap;
 

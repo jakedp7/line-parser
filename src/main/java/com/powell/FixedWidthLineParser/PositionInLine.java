@@ -1,4 +1,4 @@
-package main.java;
+package com.powell.FixedWidthLineParser;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

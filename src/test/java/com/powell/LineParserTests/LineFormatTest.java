@@ -1,9 +1,9 @@
-package test.java;
+package com.powell.LineParserTests;
 
 import junit.framework.TestCase;
 import org.junit.Test;
-import main.java.utility.FieldBounds;
-import main.java.utility.LineFormat;
+import com.powell.FixedWidthLineParser.utility.FieldBounds;
+import com.powell.FixedWidthLineParser.utility.LineFormat;
 
 /**
  * Created by Jacob on 8/29/2015.

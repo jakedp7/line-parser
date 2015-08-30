@@ -1,4 +1,4 @@
-package main.java.utility;
+package com.powell.FixedWidthLineParser.utility;
 
 /**
  * Created by Jacob on 8/29/2015.

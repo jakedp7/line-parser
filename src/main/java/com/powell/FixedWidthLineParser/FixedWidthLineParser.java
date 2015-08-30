@@ -1,7 +1,7 @@
-package main.java;
+package com.powell.FixedWidthLineParser;
 
-import main.java.utility.FieldBounds;
-import main.java.utility.LineFormat;
+import com.powell.FixedWidthLineParser.utility.FieldBounds;
+import com.powell.FixedWidthLineParser.utility.LineFormat;
 
 import java.lang.reflect.Field;
 
@@ -19,7 +19,7 @@ public class FixedWidthLineParser {
     protected Class javaBean;
 
     /**
-     * main.java.utility.LineFormat stores names and positions of fields in a
+     * com.powell.FixedWidthLineParser.LineFormatdthLineParser.utility.LineFormat stores names and positions of fields in a
      * fixed-width line of data.
      */
     private LineFormat lineFormat;
@@ -29,7 +29,7 @@ public class FixedWidthLineParser {
         //Store the input bean into the new object
         this.javaBean = javaBean;
 
-        //Extract lineFormat from annotations in the bean through main.java.utility.LineFormat
+        //Extract lineFormat from annotations in the bean through com.powell.FixedWidthLineParser.LineFormatdthLineParser.utility.LineFormat
         this.lineFormat = lineFormatFromAnnotations(javaBean);
     }
 

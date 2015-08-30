@@ -1,9 +1,11 @@
-package main.java;
+package com.powell.LineParserTests;
+
+import com.powell.FixedWidthLineParser.PositionInLine;
 
 /**
  * Created by Jacob on 8/29/2015.
  */
-public class TripOccurence {
+public class TripOccurrence {
 
     @PositionInLine(start = 1, end = 5)
     private String domicile;
@@ -20,10 +22,10 @@ public class TripOccurence {
     @PositionInLine(start=24, end=26)
     private Integer tripCountInLine;
 
-    public TripOccurence() {}
+    public TripOccurrence() {}
 
-    public TripOccurence(String domicile, Integer tripNumber,
-                         String startDate, Integer associatedLine, Integer tripCountInLine) {
+    public TripOccurrence(String domicile, Integer tripNumber,
+                          String startDate, Integer associatedLine, Integer tripCountInLine) {
 
         this.domicile = domicile;
         this.tripNumber = tripNumber;
