@@ -1,8 +1,8 @@
+package test.java;
+
 import junit.framework.TestCase;
 import org.junit.Test;
-import utility.FieldBounds;
-
-import static org.junit.Assert.*;
+import main.java.utility.FieldBounds;
 
 /**
  * Created by Jacob on 8/29/2015.

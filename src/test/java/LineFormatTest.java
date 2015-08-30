@@ -1,9 +1,9 @@
+package test.java;
+
 import junit.framework.TestCase;
 import org.junit.Test;
-import utility.FieldBounds;
-import utility.LineFormat;
-
-import static org.junit.Assert.*;
+import main.java.utility.FieldBounds;
+import main.java.utility.LineFormat;
 
 /**
  * Created by Jacob on 8/29/2015.

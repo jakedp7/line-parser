@@ -1,7 +1,6 @@
-package utility;
+package main.java.utility;
 
 import java.util.HashMap;
-import java.util.logging.FileHandler;
 
 /**
  * Created by Jacob on 8/28/2015.
@@ -16,20 +15,10 @@ public class LineFormat {
     private HashMap<String, FieldBounds> lineFormat;
 
     /**
-     * Empty constructor for later addition of entries.
+     * Empty constructor creates HashMap for later addition of entries.
      */
     public LineFormat() {
         this.lineFormat = new HashMap<String, FieldBounds>();
-    }
-
-    /**
-     * Constructor creates line format by extracting fixed-width
-     * format positions from class annotations.
-     * @param javaBean
-     */
-    public LineFormat(Class javaBean) {
-
-        this.lineFormat = extractAnnotationsToHashmap(javaBean);
     }
 
     public void addEntry(String entryName, FieldBounds fieldBounds) {
@@ -48,9 +37,5 @@ public class LineFormat {
 
         //Remove entry with specific entryName
         lineFormat.remove(entryName);
-    }
-
-    private HashMap<String, FieldBounds> extractAnnotationsToHashmap(Class javaBean) {
-        return new HashMap<>();
     }
 }

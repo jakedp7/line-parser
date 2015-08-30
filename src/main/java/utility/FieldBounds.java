@@ -1,4 +1,4 @@
-package utility;
+package main.java.utility;
 
 /**
  * Created by Jacob on 8/29/2015.
