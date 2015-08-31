@@ -1,7 +1,6 @@
 package com.powell.FixedWidthLineParser.utility;
 
-import javax.sound.sampled.Line;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -14,59 +13,68 @@ public class LineFormat {
      * to the name of the entry, and the bounds of the field in
      * a fixed-width line of data
      */
-    private HashMap<String, FieldBounds> lineFormat;
+    private ArrayList<FieldFormat> lineFormat;
 
     /**
      * Empty constructor creates HashMap for later addition of entries.
      */
     public LineFormat() {
-        this.lineFormat = new HashMap<String, FieldBounds>();
+        this.lineFormat = new ArrayList<FieldFormat>();
     }
 
-    public void addEntry(String entryName, FieldBounds fieldBounds) {
+    public void addEntry(FieldFormat fieldFormat) {
 
-        //Store the name and indices to the object
-        lineFormat.put(entryName, fieldBounds);
+        //Store the object into the arraylist
+        lineFormat.add(fieldFormat);
     }
 
-    public FieldBounds getEntryIndices(String entryName) {
+    public FieldFormat getEntry(String entryName) {
 
-        //Return the indices of the specific entryName requested
-        return lineFormat.get(entryName);
+        Iterator<FieldFormat> formatIterator = lineFormat.iterator();
+
+        while(formatIterator.hasNext()) {
+            FieldFormat currentFormat = formatIterator.next();
+
+            if(currentFormat.getName() == entryName) {
+                return currentFormat;
+            }
+        }
+        return new FieldFormat();
     }
 
     public void removeEntry(String entryName) {
 
+        Iterator<FieldFormat> formatIterator = lineFormat.iterator();
+
+        while(formatIterator.hasNext()) {
+            FieldFormat currentFormat = formatIterator.next();
+
+            if(currentFormat.getName() == entryName) {
+                lineFormat.remove(currentFormat);
+                return;
+            }
+        }
+    }
+
+    public void removeEntry(FieldFormat entry) {
+
         //Remove entry with specific entryName
-        lineFormat.remove(entryName);
+        lineFormat.remove(entry);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        LineFormat that = (LineFormat) o;
+
+        return !(lineFormat != null ? !lineFormat.equals(that.lineFormat) : that.lineFormat != null);
+
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 7 * hash + this.lineFormat.hashCode();
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        if (object == this) {
-            return true;
-        }
-        if (object == null || object.getClass() != this.getClass()) {
-            return false;
-        }
-        LineFormat lineFormatToCompare = (LineFormat)object;
-
-        Iterator<String> keyIterator = this.lineFormat.keySet().iterator();
-        while (keyIterator.hasNext()) {
-            String currentKey = keyIterator.next();
-
-            if (!this.getEntryIndices(currentKey).equals(
-                    lineFormatToCompare.getEntryIndices(currentKey))) {
-                return false;
-            }
-        }
-        return true;
+        return lineFormat != null ? lineFormat.hashCode() : 0;
     }
 }

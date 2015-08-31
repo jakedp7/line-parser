@@ -2,7 +2,6 @@ package com.powell.LineParserTests;
 
 import junit.framework.TestCase;
 import org.junit.Test;
-import com.powell.FixedWidthLineParser.utility.FieldBounds;
 import com.powell.FixedWidthLineParser.utility.LineFormat;
 
 /**
@@ -10,6 +9,7 @@ import com.powell.FixedWidthLineParser.utility.LineFormat;
  */
 public class LineFormatTest extends TestCase {
 
+    //TODO: Update test to comply with FieldFormat class which superseded FieldBounds
     @Test
     public void testEntryMethods() throws Exception {
 

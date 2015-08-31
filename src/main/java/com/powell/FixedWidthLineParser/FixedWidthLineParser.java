@@ -1,10 +1,10 @@
 package com.powell.FixedWidthLineParser;
 
-import com.powell.FixedWidthLineParser.utility.FieldBounds;
+import com.powell.FixedWidthLineParser.utility.FieldFormat;
 import com.powell.FixedWidthLineParser.utility.LineFormat;
 
 import java.lang.reflect.Field;
-
+//TODO: Comments. Check them, and add jDoc comments
 /**
  * Created by Jacob on 8/28/2015.
  */
@@ -33,7 +33,10 @@ public class FixedWidthLineParser {
         this.lineFormat = lineFormatFromAnnotations(javaBean);
     }
 
+    //TODO: parseLine. How am I going to deal with type? How will I assign values to a bean's object?
     public Object parseLine(String line) throws IllegalAccessException, InstantiationException {
+
+
 
         return this.javaBean.newInstance();
     }
@@ -53,12 +56,30 @@ public class FixedWidthLineParser {
             PositionInLine positionAnnotation = field.getAnnotation(PositionInLine.class);
 
             if (positionAnnotation != null) {
-                FieldBounds flatWidthFieldBounds = new FieldBounds(
-                        positionAnnotation.start(), positionAnnotation.end());
-                lineFormat.addEntry(field.getName(), flatWidthFieldBounds);
+                lineFormat.addEntry(new FieldFormat(field.getName(),
+                        positionAnnotation.start(), positionAnnotation.end()));
             }
         }
 
         return lineFormat;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        FixedWidthLineParser that = (FixedWidthLineParser) o;
+
+        if (javaBean != null ? !javaBean.equals(that.javaBean) : that.javaBean != null) return false;
+        return !(getLineFormat() != null ? !getLineFormat().equals(that.getLineFormat()) : that.getLineFormat() != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = javaBean != null ? javaBean.hashCode() : 0;
+        result = 31 * result + (getLineFormat() != null ? getLineFormat().hashCode() : 0);
+        return result;
     }
 }
