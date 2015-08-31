@@ -1,5 +1,6 @@
 package com.powell.FixedWidthLineParser.utility;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -30,27 +31,19 @@ public class LineFormat {
 
     public FieldFormat getEntry(String entryName) {
 
-        Iterator<FieldFormat> formatIterator = lineFormat.iterator();
-
-        while(formatIterator.hasNext()) {
-            FieldFormat currentFormat = formatIterator.next();
-
-            if(currentFormat.getName() == entryName) {
-                return currentFormat;
+        for(FieldFormat format : lineFormat) {
+            if(format.getName() == entryName) {
+                return format;
             }
         }
-        return new FieldFormat();
+        return null;
     }
 
     public void removeEntry(String entryName) {
 
-        Iterator<FieldFormat> formatIterator = lineFormat.iterator();
-
-        while(formatIterator.hasNext()) {
-            FieldFormat currentFormat = formatIterator.next();
-
-            if(currentFormat.getName() == entryName) {
-                lineFormat.remove(currentFormat);
+        for(FieldFormat format : lineFormat) {
+            if(format.getName() == entryName) {
+                lineFormat.remove(format);
                 return;
             }
         }
@@ -58,7 +51,7 @@ public class LineFormat {
 
     public void removeEntry(FieldFormat entry) {
 
-        //Remove entry with specific entryName
+        //Remove entry
         lineFormat.remove(entry);
     }
 

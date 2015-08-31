@@ -11,7 +11,7 @@ import com.powell.FixedWidthLineParser.utility.LineFormat;
 public class LineFormatTest extends TestCase {
 
     @Test
-    public void testEntryMethods() throws Exception {
+    public void testFormatEntryMethods() throws Exception {
 
         //Create and populate an object object
         LineFormat lineFormat = new LineFormat();

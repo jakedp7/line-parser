@@ -1,4 +1,4 @@
-package com.powell.FixedWidthLineParser.utility;
+package com.powell.LineParserTests;
 
 import junit.framework.TestCase;
 import org.junit.Test;
