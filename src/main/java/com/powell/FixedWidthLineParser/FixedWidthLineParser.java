@@ -4,6 +4,11 @@ import com.powell.FixedWidthLineParser.utility.FieldFormat;
 import com.powell.FixedWidthLineParser.utility.LineFormat;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.util.LinkedHashMap;
+
+import org.apache.commons.beanutils.BeanUtilsBean;
+
 //TODO: Comments. Check them, and add jDoc comments
 /**
  * Created by Jacob on 8/28/2015.
@@ -33,12 +38,22 @@ public class FixedWidthLineParser {
         this.lineFormat = lineFormatFromAnnotations(javaBean);
     }
 
-    //TODO: parseLine. How am I going to deal with type? How will I assign values to a bean's object?
-    public Object parseLine(String line) throws IllegalAccessException, InstantiationException {
+    public <T> T parse(String line) throws IllegalAccessException, InstantiationException, InvocationTargetException {
 
+        LinkedHashMap parsedData = new LinkedHashMap();
 
+        for(FieldFormat fieldFormat : lineFormat) {
+            String parsedSegment = line.substring(
+                    (fieldFormat.getStartPos() - 1), (fieldFormat.getEndPos() - 1));
+            parsedSegment = parsedSegment.trim();
 
-        return this.javaBean.newInstance();
+            parsedData.put(fieldFormat.getName(), parsedSegment);
+        }
+
+        Object newBean = javaBean.newInstance();
+        BeanUtilsBean.getInstance().populate(newBean, parsedData);
+
+        return (T)(newBean);
     }
 
     public LineFormat getLineFormat() {

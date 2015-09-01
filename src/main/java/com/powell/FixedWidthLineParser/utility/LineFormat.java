@@ -7,7 +7,7 @@ import java.util.Iterator;
 /**
  * Created by Jacob on 8/28/2015.
  */
-public class LineFormat {
+public class LineFormat implements Iterable<FieldFormat> {
 
     /**
      * Hashmap contains the line format - the string corresponds
@@ -53,6 +53,12 @@ public class LineFormat {
 
         //Remove entry
         lineFormat.remove(entry);
+    }
+
+    @Override
+    public Iterator<FieldFormat> iterator() {
+
+        return lineFormat.iterator();
     }
 
     @Override

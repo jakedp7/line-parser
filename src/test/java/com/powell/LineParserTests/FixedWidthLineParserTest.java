@@ -6,6 +6,10 @@ import junit.framework.TestCase;
 import com.powell.FixedWidthLineParser.FixedWidthLineParser;
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+
 /**
  * Created by Jacob on 8/29/2015.
  */
@@ -31,6 +35,44 @@ public class FixedWidthLineParserTest extends TestCase {
 
     @Test
     public void testParseLine() throws Exception {
+        final String testLineToParse =
+                "SDF  0001 20150915 20151027 06:10 02:10 006:00 004:10 02 008:11 0 Y M";
 
+        TripSummary expectedParsedObject = new TripSummary();
+        expectedParsedObject.setDomicile("SDF");
+        expectedParsedObject.setTripNumber(1);
+        expectedParsedObject.setEffecStartDate("20150915");
+        expectedParsedObject.setEffecEndDate("20151027");
+        expectedParsedObject.setUtcReportTime("06:10");
+        expectedParsedObject.setLocalReportTime("02:10");
+        expectedParsedObject.setCreditHours("006:00");
+        expectedParsedObject.setBlockHours("004:10");
+        expectedParsedObject.setLandings(2);
+        expectedParsedObject.setTimeAwayFromBase("008:11");
+
+        FixedWidthLineParser lineParser =  new FixedWidthLineParser(TripSummary.class);
+        TripSummary actualParsedObject = lineParser.parse(testLineToParse);
+
+        assertEquals("Line parsing failed", expectedParsedObject, actualParsedObject);
+    }
+
+    @Test
+    public void testFileParse() throws Exception {
+
+        BufferedReader fileReader = new BufferedReader(
+                new FileReader("src/test/resources/TripSummaries.txt"));
+
+        FixedWidthLineParser lineParser =  new FixedWidthLineParser(TripSummary.class);
+
+        ArrayList<TripSummary> parsedObjects = new ArrayList();
+
+        while(fileReader.ready()) {
+            String currentLine = fileReader.readLine();
+            if(currentLine.length() > 1) {
+                parsedObjects.add(lineParser.parse(currentLine));
+            }
+        }
+
+        assertEquals("File parsing failed", parsedObjects.size(), 20);
     }
 }
