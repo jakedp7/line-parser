@@ -6,7 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by Jacob on 8/29/2015.
+ * An annotation to be applied to fields in a JavaBean
+ * that indicates the position of of a data point in a
+ * fixed-width line of data.
+ * @author jakedp7
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

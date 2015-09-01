@@ -9,9 +9,16 @@ import java.util.LinkedHashMap;
 
 import org.apache.commons.beanutils.BeanUtilsBean;
 
-//TODO: Comments. Check them, and add jDoc comments
 /**
- * Created by Jacob on 8/28/2015.
+ * A Fixed-Width single-line parser that uses an annotated
+ * JavaBean to extract data into an object of the bean.
+ *
+ * The positions of each data field in a line is stored
+ * upon construction, and parsing a line results in a
+ * data-filled object of the original stored bean.
+ *
+ * The parsed lineFormat can be viewed through a getter.
+ * @author jakedp7
  */
 public class FixedWidthLineParser {
 
@@ -29,6 +36,11 @@ public class FixedWidthLineParser {
      */
     private LineFormat lineFormat;
 
+    /**
+     * Constructs a LineParser from the input JavaBean
+     * and stores the bean for later object creation.
+     * @param javaBean
+     */
     public FixedWidthLineParser(Class javaBean) {
 
         //Store the input bean into the new object
@@ -38,38 +50,77 @@ public class FixedWidthLineParser {
         this.lineFormat = lineFormatFromAnnotations(javaBean);
     }
 
-    public <T> T parse(String line) throws IllegalAccessException, InstantiationException, InvocationTargetException {
+    /**
+     * Parses a single line in a string into a javaBean.
+     * Returns null if errors occur - if the Bean can't be
+     * instantiated, or if the data schema of the bean and
+     * the LineFormat don't match up.
+     * @param line
+     * @param <T>
+     * @return (T)parsedJavaBean
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws InvocationTargetException
+     */
+    public <T> T parse(String line) {
 
+        //Created an empty Map to store parsed data in
         LinkedHashMap parsedData = new LinkedHashMap();
 
+        //Loop through each FieldFormat in the LineFormat
         for(FieldFormat fieldFormat : lineFormat) {
+            //Extract the data field
             String parsedSegment = line.substring(
                     (fieldFormat.getStartPos() - 1), (fieldFormat.getEndPos() - 1));
             parsedSegment = parsedSegment.trim();
 
+            //Add it to the data Map
             parsedData.put(fieldFormat.getName(), parsedSegment);
         }
 
-        Object newBean = javaBean.newInstance();
-        BeanUtilsBean.getInstance().populate(newBean, parsedData);
-
-        return (T)(newBean);
+        //Create the bean and map the parsedData to it
+        try {
+            Object newBean = javaBean.newInstance();
+            BeanUtilsBean.getInstance().populate(newBean, parsedData);
+            return (T)(newBean);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            return null;
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+            return null;
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
+    /**
+     * Get the extracted LineFormat object
+     * @return LineFormat
+     */
     public LineFormat getLineFormat() {
         return lineFormat;
     }
 
+    /**
+     * Parse the javaBean for PositionInLine annotations and
+     * add them to a LineFormat object.
+     * @param javaBean
+     * @return LineFormat
+     */
     private LineFormat lineFormatFromAnnotations(Class javaBean) {
 
+        //Instantiate a blank LineFormat
         LineFormat lineFormat = new LineFormat();
 
-        /* For each field, check if there is a position annotation, and
-         * if so, add an entry to the lineFormat */
+        //Loop through each declared field in the class
         for (Field field : javaBean.getDeclaredFields()) {
 
+            //For each field, store it's PositionInLine annotation
             PositionInLine positionAnnotation = field.getAnnotation(PositionInLine.class);
 
+            //If annotation exists, create a FieldFormat and add it to the LineFormat
             if (positionAnnotation != null) {
                 lineFormat.addEntry(new FieldFormat(field.getName(),
                         positionAnnotation.start(), positionAnnotation.end()));
