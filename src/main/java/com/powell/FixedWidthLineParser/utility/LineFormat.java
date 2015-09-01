@@ -1,54 +1,79 @@
 package com.powell.FixedWidthLineParser.utility;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Created by Jacob on 8/28/2015.
+ * The iterable LineFormat class consists of an ArrayList of
+ * FieldFormats that define a single line of Fixed-Width data.
+ * Each FieldFormat can be accessed or deleted through it's name.
+ * @author jakedp7
  */
 public class LineFormat implements Iterable<FieldFormat> {
 
-    /**
-     * Hashmap contains the line format - the string corresponds
-     * to the name of the entry, and the bounds of the field in
-     * a fixed-width line of data
-     */
     private ArrayList<FieldFormat> lineFormat;
 
     /**
-     * Empty constructor creates HashMap for later addition of entries.
+     * Empty constructor instantiates the member ArrayList
      */
     public LineFormat() {
+
+        //Instantiate the ArrayList
         this.lineFormat = new ArrayList<FieldFormat>();
     }
 
+    /**
+     * Adds a field to the LineFormat
+     * @param fieldFormat
+     */
     public void addEntry(FieldFormat fieldFormat) {
 
-        //Store the object into the arraylist
+        //Store the FieldFormat
         lineFormat.add(fieldFormat);
     }
 
+    /**
+     * Get an individual FieldFormat with a specific title.
+     * @param entryName
+     * @return
+     */
     public FieldFormat getEntry(String entryName) {
 
+        //Loop through the ArrayList
         for(FieldFormat format : lineFormat) {
+            //When the entry with a matching entryName is founda
             if(format.getName() == entryName) {
+                //Return it
                 return format;
             }
         }
+        //If none are found, return null
         return null;
     }
 
+    /**
+     * Delete an entry from the LineFormat based on the
+     * entry name.
+     * @param entryName
+     */
     public void removeEntry(String entryName) {
 
+        //Loop through the ArrayList
         for(FieldFormat format : lineFormat) {
+            //When the entry with the matching entryName is found
             if(format.getName() == entryName) {
+                //Delete it and break the loop
                 lineFormat.remove(format);
-                return;
+                break;
             }
         }
     }
 
+    /**
+     * Delete an entry from the LineFormat based on the
+     * object passed in itself.
+     * @param entry
+     */
     public void removeEntry(FieldFormat entry) {
 
         //Remove entry

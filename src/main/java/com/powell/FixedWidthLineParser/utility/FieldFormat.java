@@ -1,7 +1,9 @@
 package com.powell.FixedWidthLineParser.utility;
 
 /**
- * Created by Jacob on 8/29/2015.
+ * A JavaBean-like container for a specific data field and
+ * its position in a fixed-width line of data.
+ * @author jakedp7
  */
 public class FieldFormat {
 
@@ -10,8 +12,17 @@ public class FieldFormat {
     private int startPos;
     private int endPos;
 
+    /**
+     * Creates an empty FieldFormat
+     */
     public FieldFormat() {}
 
+    /**
+     * Creates a FieldFormat with all of the members assigned
+     * @param name
+     * @param startPos
+     * @param endPos
+     */
     public FieldFormat(String name, int startPos, int endPos) {
         this.name = name;
         this.startPos = startPos;

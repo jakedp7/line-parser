@@ -1,7 +1,10 @@
 package com.powell.LineParserTests;
 
+import com.powell.FixedWidthLineParser.utility.FieldFormat;
 import junit.framework.TestCase;
 import org.junit.Test;
+
+import java.lang.reflect.Field;
 
 import static org.junit.Assert.*;
 
@@ -10,34 +13,16 @@ import static org.junit.Assert.*;
  */
 public class FieldFormatTest extends TestCase {
 
-    //TODO: Create basic test(s?) for FieldFormat bean, including full equals/hashcode checks
     @Test
-    public void testGetName() throws Exception {
+    public void testGettersAndSetters() throws Exception {
+        FieldFormat fieldFormat = new FieldFormat();
 
-    }
+        fieldFormat.setName("domicile");
+        fieldFormat.setStartPos(1);
+        fieldFormat.setEndPos(5);
 
-    @Test
-    public void testSetName() throws Exception {
-
-    }
-
-    @Test
-    public void testGetStartPos() throws Exception {
-
-    }
-
-    @Test
-    public void testSetStartPos() throws Exception {
-
-    }
-
-    @Test
-    public void testGetEndPos() throws Exception {
-
-    }
-
-    @Test
-    public void testSetEndPos() throws Exception {
-
+        assertEquals("domicile", fieldFormat.getName());
+        assertEquals(1, fieldFormat.getStartPos());
+        assertEquals(5, fieldFormat.getEndPos());
     }
 }
