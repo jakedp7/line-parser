@@ -68,14 +68,18 @@ public class FixedWidthLineParser {
 
             String parsedSegment;
 
-            if (fieldFormat.getEndAtEol()) {
-                //Extract the data field from the start string index until the End-of-Line
-                parsedSegment = line.substring(
-                        (fieldFormat.getStartPos() - 1), (line.length()));
-            } else {
-                //Extract the data field from the start string index to the end string index
-                parsedSegment = line.substring(
-                        (fieldFormat.getStartPos() - 1), (fieldFormat.getEndPos() - 1));
+            try {
+                if (fieldFormat.getEndAtEol()) {
+                    //Extract the data field from the start string index until the End-of-Line
+                    parsedSegment = line.substring(
+                            (fieldFormat.getStartPos() - 1), (line.length()));
+                } else {
+                    //Extract the data field from the start string index to the end string index
+                    parsedSegment = line.substring(
+                            (fieldFormat.getStartPos() - 1), (fieldFormat.getEndPos() - 1));
+                }
+            } catch (IndexOutOfBoundsException exception) {
+                parsedSegment = "";
             }
 
             //Clean the extracted data
