@@ -21,7 +21,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="apache-beanutils:commons-beanutils:1.7.0" level="project" />
-    <orderEntry type="library" name="apache-logging:commons-logging:1.1.0.jboss" level="project" />
+    <orderEntry type="library" exported="" name="apache-beanutils:commons-beanutils:1.7.0" level="project" />
+    <orderEntry type="library" exported="" name="apache-logging:commons-logging:1.1.0.jboss" level="project" />
   </component>
 </module>

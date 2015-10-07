@@ -16,5 +16,6 @@ import java.lang.annotation.Target;
 public @interface PositionInLine {
 
     int start() default 0;
-    int end();
+    int end() default 1;
+    boolean endAtEol() default false;
 }
