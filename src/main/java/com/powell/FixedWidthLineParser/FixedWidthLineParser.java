@@ -2,12 +2,11 @@ package com.powell.FixedWidthLineParser;
 
 import com.powell.FixedWidthLineParser.utility.FieldFormat;
 import com.powell.FixedWidthLineParser.utility.LineFormat;
+import org.apache.commons.beanutils.BeanUtilsBean;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedHashMap;
-
-import org.apache.commons.beanutils.BeanUtilsBean;
 
 /**
  * A Fixed-Width single-line parser that uses an annotated
@@ -66,9 +65,20 @@ public class FixedWidthLineParser {
 
         //Loop through each FieldFormat in the LineFormat
         for(FieldFormat fieldFormat : lineFormat) {
-            //Extract the data field
-            String parsedSegment = line.substring(
-                    (fieldFormat.getStartPos() - 1), (fieldFormat.getEndPos() - 1));
+
+            String parsedSegment;
+
+            if (fieldFormat.getEndAtEol()) {
+                //Extract the data field from the start string index until the End-of-Line
+                parsedSegment = line.substring(
+                        (fieldFormat.getStartPos() - 1), (line.length() - 1));
+            } else {
+                //Extract the data field from the start string index to the end string index
+                parsedSegment = line.substring(
+                        (fieldFormat.getStartPos() - 1), (fieldFormat.getEndPos() - 1));
+            }
+
+            //Clean the extracted data
             parsedSegment = parsedSegment.trim();
 
             //Add it to the data Map
@@ -119,8 +129,9 @@ public class FixedWidthLineParser {
 
             //If annotation exists, create a FieldFormat and add it to the LineFormat
             if (positionAnnotation != null) {
-                lineFormat.addEntry(new FieldFormat(field.getName(),
-                        positionAnnotation.start(), positionAnnotation.end()));
+
+                lineFormat.addEntry(new FieldFormat(field.getName(), positionAnnotation.start(),
+                        positionAnnotation.end(), positionAnnotation.endAtEol()));
             }
         }
 

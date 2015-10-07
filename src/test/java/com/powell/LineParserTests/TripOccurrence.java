@@ -19,7 +19,7 @@ public class TripOccurrence {
     @PositionInLine(start=20, end=23)
     private Integer associatedLine;
 
-    @PositionInLine(start=24, end=26)
+    @PositionInLine(start=24, endAtEol=true)
     private Integer tripCountInLine;
 
     public TripOccurrence() {}
