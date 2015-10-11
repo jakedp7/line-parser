@@ -19,7 +19,7 @@ public class LineFormat implements Iterable<FieldFormat> {
     public LineFormat() {
 
         //Instantiate the ArrayList
-        this.lineFormat = new ArrayList<FieldFormat>();
+        this.lineFormat = new ArrayList<>();
     }
 
     /**
@@ -42,7 +42,7 @@ public class LineFormat implements Iterable<FieldFormat> {
         //Loop through the ArrayList
         for(FieldFormat format : lineFormat) {
             //When the entry with a matching entryName is found
-            if(format.getName() == entryName) {
+            if(format.getName().equals(entryName)) {
                 //Return it
                 return format;
             }
@@ -61,7 +61,7 @@ public class LineFormat implements Iterable<FieldFormat> {
         //Loop through the ArrayList
         for(FieldFormat format : lineFormat) {
             //When the entry with the matching entryName is found
-            if(format.getName() == entryName) {
+            if(format.getName().equals(entryName)) {
                 //Delete it and break the loop
                 lineFormat.remove(format);
                 break;
