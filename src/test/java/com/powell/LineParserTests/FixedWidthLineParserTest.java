@@ -36,20 +36,20 @@ public class FixedWidthLineParserTest extends TestCase {
     @Test
     public void testParseLine() throws Exception {
 
-        final String tripOccurenceTestLineToParse =
+        final String tripOccurrenceTestLineToParse =
                 "SDF  0001 20151020 002 15";
 
-        TripOccurrence expectedParsedTripOccurence = new TripOccurrence();
-        expectedParsedTripOccurence.setDomicile("SDF");
-        expectedParsedTripOccurence.setTripNumber(1);
-        expectedParsedTripOccurence.setStartDate("20151020");
-        expectedParsedTripOccurence.setAssociatedLine(2);
-        expectedParsedTripOccurence.setTripCountInLine(15);
+        TripOccurrence expectedParsedTripOccurrence = new TripOccurrence();
+        expectedParsedTripOccurrence.setDomicile("SDF");
+        expectedParsedTripOccurrence.setTripNumber(1);
+        expectedParsedTripOccurrence.setStartDate("20151020");
+        expectedParsedTripOccurrence.setAssociatedLine(2);
+        expectedParsedTripOccurrence.setTripCountInLine(15);
 
-        FixedWidthLineParser tripOccurenceLineParser =  new FixedWidthLineParser(TripOccurrence.class);
-        TripOccurrence actualParsedTripOccurence = tripOccurenceLineParser.parse(tripOccurenceTestLineToParse);
+        FixedWidthLineParser tripOccurrenceLineParser =  new FixedWidthLineParser(TripOccurrence.class);
+        TripOccurrence actualParsedTripOccurrence = tripOccurrenceLineParser.parse(tripOccurrenceTestLineToParse);
 
-        assertEquals("Line parsing failed", expectedParsedTripOccurence, actualParsedTripOccurence);
+        assertEquals("Line parsing failed", expectedParsedTripOccurrence, actualParsedTripOccurrence);
 
 
         

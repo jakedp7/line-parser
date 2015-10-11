@@ -41,7 +41,7 @@ public class LineFormat implements Iterable<FieldFormat> {
 
         //Loop through the ArrayList
         for(FieldFormat format : lineFormat) {
-            //When the entry with a matching entryName is founda
+            //When the entry with a matching entryName is found
             if(format.getName() == entryName) {
                 //Return it
                 return format;

@@ -45,7 +45,7 @@ public class FixedWidthLineParser {
         //Store the input bean into the new object
         this.javaBean = javaBean;
 
-        //Extract lineFormat from annotations in the bean through com.powell.FixedWidthLineParser.LineFormatdthLineParser.utility.LineFormat
+        //Extract lineFormat from annotations in the bean
         this.lineFormat = lineFormatFromAnnotations(javaBean);
     }
 
