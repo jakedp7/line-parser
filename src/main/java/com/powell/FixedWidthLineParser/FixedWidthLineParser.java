@@ -9,12 +9,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedHashMap;
 
 /**
- * A Fixed-Width single-line parser that uses an annotated
- * JavaBean to extract data into an object of the bean.
+ * A Fixed-Width single-line parser that uses an annotated JavaBean to extract data
+ * into an object of the bean.
  *
- * The positions of each data field in a line is stored
- * upon construction, and parsing a line results in a
- * data-filled object of the original stored bean.
+ * The positions of each data field in a line is stored upon construction, and parsing
+ * a line results in a data-filled object of the original stored bean.
  *
  * The parsed lineFormat can be viewed through a getter.
  * @author jakedp7
@@ -22,23 +21,20 @@ import java.util.LinkedHashMap;
 public class FixedWidthLineParser {
 
     /**
-     * javaBean annotated with each member's position in the
-     * fixed-width line format - parsed lines will be output
-     * as an object from this class, and the class'
-     * annotations define how to parse each line.
+     * Javabean annotated with each member's position in the fixed-width line format - parsed
+     * lines will be output as an object of this class, and the class's annotations define
+     * how to parse each line.
      */
     protected Class javaBean;
 
     /**
-     * LineFormat stores names and positions of fields in a
-     * fixed-width line of data.
+     * LineFormat stores names and positions of fields in a fixed-width line of data.
      */
     private LineFormat lineFormat;
 
     /**
-     * Constructs a LineParser from the input JavaBean
-     * and stores the bean for later object creation.
-     * @param javaBean
+     * Constructs a LineParser from the input JavaBean and stores the bean for later object creation.
+     * @param javaBean Bean class with fixed-width format annotations
      */
     public FixedWidthLineParser(Class javaBean) {
 
@@ -50,13 +46,11 @@ public class FixedWidthLineParser {
     }
 
     /**
-     * Parses a single line in a string into a javaBean.
-     * Returns null if errors occur - if the Bean can't be
-     * instantiated, or if the data schema of the bean and
-     * the LineFormat don't match up.
-     * @param line
+     * Parses a single line in a string into a javaBean. Returns null if errors occur - if the Bean
+     * can't be instantiated, or if the data scheme of the bean and the LineFormat don't match up.
+     * @param line String of text to parse
      * @param <T>
-     * @return (T)parsedJavaBean
+     * @return (T)parsedJavaBean containing the parsed data
      */
     public <T> T parse(String line) {
 
@@ -108,17 +102,16 @@ public class FixedWidthLineParser {
 
     /**
      * Get the extracted LineFormat object
-     * @return LineFormat
+     * @return LineFormat object that was parsed during construction
      */
     public LineFormat getLineFormat() {
         return lineFormat;
     }
 
     /**
-     * Parse the javaBean for PositionInLine annotations and
-     * add them to a LineFormat object.
-     * @param javaBean
-     * @return LineFormat
+     * Parse the javaBean for PositionInLine annotations and add them to a LineFormat object.
+     * @param javaBean Bean class to parse for annotations
+     * @return LineFormat object to store parsed format
      */
     private LineFormat lineFormatFromAnnotations(Class javaBean) {
 
@@ -140,24 +133,5 @@ public class FixedWidthLineParser {
         }
 
         return lineFormat;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        FixedWidthLineParser that = (FixedWidthLineParser) o;
-
-        if (javaBean != null ? !javaBean.equals(that.javaBean) : that.javaBean != null) return false;
-        return !(getLineFormat() != null ? !getLineFormat().equals(that.getLineFormat()) : that.getLineFormat() != null);
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = javaBean != null ? javaBean.hashCode() : 0;
-        result = 31 * result + (getLineFormat() != null ? getLineFormat().hashCode() : 0);
-        return result;
     }
 }

@@ -1,8 +1,8 @@
 package com.powell.FixedWidthLineParser.utility;
 
 /**
- * A JavaBean-like container for a specific data field and
- * its position in a fixed-width line of data.
+ * A JavaBean container for a specific data field and its position indices
+ * in a fixed-width line of text.
  * @author jakedp7
  */
 public class FieldFormat {
@@ -19,9 +19,9 @@ public class FieldFormat {
 
     /**
      * Creates a FieldFormat with endAtEol at its default value of false
-     * @param name
-     * @param startPos
-     * @param endPos
+     * @param name Indicates the title of the entry in a line.
+     * @param startPos Indicates the starting place of the entry in a line.
+     * @param endPos Indicates the ending place of the entry in a line.
      */
     public FieldFormat(String name, Integer startPos, Integer endPos) {
         this.name = name;
@@ -30,10 +30,11 @@ public class FieldFormat {
     }
 
     /**
-     * Creates a FieldFormat without an endPos
-     * @param name
-     * @param startPos
-     * @param endAtEol
+     * Creates a FieldFormat that can take endAtEol as a parameter, and
+     * defaults endPos to 1.
+     * @param name Indicates the title of the entry in a line.
+     * @param startPos Indicates the starting place of the entry in a line.
+     * @param endAtEol Indicates if the entry should be parsed until EOL is reached.
      */
     public FieldFormat(String name, int startPos, Boolean endAtEol) {
         this.name = name;
@@ -43,11 +44,11 @@ public class FieldFormat {
     }
 
     /**
-     * Creates a FieldFormat with all members assigned
-     * @param name
-     * @param startPos
-     * @param endPos
-     * @param endAtEol
+     * Creates a FieldFormat with all members parametrized.
+     * @param name Indicates the title of the entry in a line.
+     * @param startPos Indicates the starting place of the entry in a line.
+     * @param endPos Indicates the ending place of the entry in a line.
+     * @param endAtEol Indicates if the entry should be parsed until EOL is reached.
      */
     public FieldFormat(String name, int startPos, int endPos, Boolean endAtEol) {
         this.name = name;
@@ -86,6 +87,16 @@ public class FieldFormat {
 
     public void setEndAtEol(Boolean endAtEol) {
         this.endAtEol = endAtEol;
+    }
+
+    @Override
+    public String toString() {
+        return "FieldFormat{" +
+                "name='" + name + '\'' +
+                ", startPos=" + startPos +
+                ", endPos=" + endPos +
+                ", endAtEol=" + endAtEol +
+                '}';
     }
 
     @Override

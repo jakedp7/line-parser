@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * The iterable LineFormat class consists of an ArrayList of
- * FieldFormats that define a single line of Fixed-Width data.
- * Each FieldFormat can be accessed or deleted through it's name.
+ * The iterable LineFormat class consists of an ArrayList of FieldFormats that define
+ * a single line of Fixed-Width data. Each FieldFormat can be accessed or deleted
+ * through it's name.
  * @author jakedp7
  */
 public class LineFormat implements Iterable<FieldFormat> {
@@ -14,7 +14,7 @@ public class LineFormat implements Iterable<FieldFormat> {
     private ArrayList<FieldFormat> lineFormat;
 
     /**
-     * Empty constructor instantiates the member ArrayList
+     * Empty constructor instantiates the member ArrayList and leaves it blank.
      */
     public LineFormat() {
 
@@ -23,8 +23,8 @@ public class LineFormat implements Iterable<FieldFormat> {
     }
 
     /**
-     * Adds a field to the LineFormat
-     * @param fieldFormat
+     * Adds a fieldFormat to the larger LineFormat
+     * @param fieldFormat Data entry to store
      */
     public void addEntry(FieldFormat fieldFormat) {
 
@@ -34,8 +34,8 @@ public class LineFormat implements Iterable<FieldFormat> {
 
     /**
      * Get an individual FieldFormat with a specific title.
-     * @param entryName
-     * @return
+     * @param entryName Entry name to retrieve
+     * @return format is the retrieved FieldFormat with matching entryName
      */
     public FieldFormat getEntry(String entryName) {
 
@@ -52,9 +52,8 @@ public class LineFormat implements Iterable<FieldFormat> {
     }
 
     /**
-     * Delete an entry from the LineFormat based on the
-     * entry name.
-     * @param entryName
+     * Deletes an entry from the LineFormat based on the entry name.
+     * @param entryName Entry name to delete
      */
     public void removeEntry(String entryName) {
 
@@ -70,9 +69,8 @@ public class LineFormat implements Iterable<FieldFormat> {
     }
 
     /**
-     * Delete an entry from the LineFormat based on the
-     * object passed in itself.
-     * @param entry
+     * Delete an entry from the LineFormat based on the parametrized object itself.
+     * @param entry FieldFormat object to be deleted.
      */
     public void removeEntry(FieldFormat entry) {
 
@@ -84,6 +82,13 @@ public class LineFormat implements Iterable<FieldFormat> {
     public Iterator<FieldFormat> iterator() {
 
         return lineFormat.iterator();
+    }
+
+    @Override
+    public String toString() {
+        return "LineFormat{" +
+                "lineFormat=" + lineFormat +
+                '}';
     }
 
     @Override
